@@ -1,0 +1,81 @@
+<!-- Bandeau de Tête avec Image et Titre -->
+<img style="width:100%;" src="assets\Image\l-affaires.png">
+
+<!-- DEBUT NAVBAR PRINCIPAL -->
+<!-- Dropdown -->
+<ul id="affaire" class="dropdown-content">
+    <li><a href="#" routerLink="/a-affaire"><i class="material-icons">add</i>Ajout d'une affaire</a></li>
+    <li class="divider"></li>
+    <li><a href="#" routerLink="/l-affaire"><i class="material-icons">view_module</i>Liste d'affaires</a></li>
+</ul>
+
+<ul id="tache" class="dropdown-content">
+    <li><a href="#" routerLink="/a-tache"><i class="material-icons">add</i>Ajout d'une tâche</a></li>
+</ul>
+
+<ul id="tribunaux" class="dropdown-content">
+    <li><a href="#" routerLink="/l-tribunaux"><i class="material-icons">view_module</i>Liste des tribunaux</a></li>
+</ul>
+
+<ul id="utilisateurs" class="dropdown-content">
+    <li><a href="#" routerLink="/l-utilisateurs"><i class="material-icons">view_module</i>Liste des utilisateurs</a>
+    </li>
+</ul>
+
+<!-- Navbar -->
+<nav>
+    <div class="row">
+        <div class="nav-wrapper">
+            <ul class="col s3 push-s1">
+                <li><a class="dropdown-trigger" href="#" data-target="affaire">Affaires<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <ul class="col s3 push-s1">
+                <li><a class="dropdown-trigger" href="#" data-target="tache">Tâches<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <ul class="col s3 push-s1">
+                <li><a class="dropdown-trigger" href="#" data-target="tribunaux">Tribunaux<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <ul class="col s3 push-s1">
+                <li><a class="dropdown-trigger" href="#" data-target="utilisateurs">Utilisateurs<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- FIN NAVBAR PRINCIPAL -->
+
+<br><br>
+
+<!-- Liste Affaires -->
+<div class="container">
+    <form>
+        <div>
+            <table id="example" class="display" style="width:100%">
+                <thead style="background-color: #a93226;  color: white">
+                    <tr>
+                        <th style="width:10%; text-align: center">Référence</th>
+                        <th style="width:20%; text-align: center;">Titre</th>
+                        <th style="width:40%; text-align: center;">Description</th>
+                        <th style="width:20%; text-align: center;">Status</th>
+                        <th style="width:10%; text-align: center;">Consulter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let affaire of affaires">
+                        <td style="text-align: center">{{affaire.reference}}</td>
+                        <td style="text-align: center">{{affaire.titre}}</td>
+                        <td style="text-align: center">{{affaire.description}}</td>
+                        <td style="text-align: center">{{affaire.status}}</td>
+                        <td>
+                            <a class="waves-effect blue-grey darken-2 btn"><i
+                                    class="material-icons">remove_red_eye</i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,30 @@
+<!-- Bandeau de Tête avec Image et Titre -->
+<img style="width:100%;" src="assets\Image\l-utilisateurs.png">
+
+<app-navbar></app-navbar>
+
+<br><br>
+
+<!-- DEBUT LISTE UTILISATEUR -->
+<div class="container">
+    <form>
+        <div>
+            <table id="example" class="display" style="width:100%">
+                <thead style="background-color: #a93226; color: white">
+                    <tr>
+                        <th style="width:30%; text-align: center">Prénom</th>
+                        <th style="width:30%; text-align: center">Nom</th>
+                        <th style="width:40%; text-align: center">Email</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let utilisateur of listUtilisateur">
+                        <td style="text-align: center">{{utilisateur.prenom}}</td>
+                        <td style="text-align: center">{{utilisateur.nom}}</td>
+                        <td style="text-align: center">{{utilisateur.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+<!-- FIN LISTE UTILISATEUR -->

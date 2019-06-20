@@ -1,31 +1,34 @@
-<div class="card-panel teal lighten-2">
-    <h2 class="center">Document selectionné</h2>
+<!-- Bandeau de Tête avec Image et Titre -->
+<img style="width:100%;" src="assets\Image\d-document.png">
+<app-navbar></app-navbar>
+<br><br>
+
+<!-- Body de la Page -->
+<!-- Détail du document -->
+<div class="container">
+    <form>
+        <div>
+            <table id="example" class="display" style="width:100%">
+                <thead style="background-color: #a93226; color: white">
+                    <tr>
+                        <th style="width:20%;  text-align: center">Nom</th>
+                        <th style="width:20%;  text-align: center">Date de Création</th>
+                        <th style="width:40%;  text-align: center">Description</th>
+                        <th style="width:20%;  text-align: center">Lien vers le PDF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center">{{documentActif.nom}}</td>
+                        <td style="text-align: center">{{documentActif.description}}</td>
+                        <td style="text-align: center">{{documentActif.dateCreation}}</td>
+                        <td style="text-align: center"><a class="waves-effect blue-grey darken-2 btn"><i
+                                    class="material-icons">remove_red_eye</i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
 </div>
 
-<app-navbar></app-navbar>
-
-<br><br><br><br><br>
-
-<!-- Tableau pour le document que l'on consulte -->
-<form>
-    <div>
-        <table class="highlight, centered">
-            <thead style="background-color: grey">
-                <tr>
-                    <th style="width:20%;">Nom</th>
-                    <th style="width:40%;">Description</th>
-                    <th style="width:20%;">Date de Création</th>
-                    <th style="width:20%;">Lien vers le PDF</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{documentActif.nom}}</td>
-                    <td>{{documentActif.description}}</td>
-                    <td>{{documentActif.dateCreation}}</td>
-                    <td><a class="waves-effect waves-light btn"><i class="material-icons">remove_red_eye</i></a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</form>
+<br><br>

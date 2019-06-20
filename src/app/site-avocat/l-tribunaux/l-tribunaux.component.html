@@ -7,25 +7,27 @@
 
 <!-- Liste des Tribunaux -->
 <div class="container">
-  <form>
-    <div>
-      <table id="example" class="display" style="width:100%">
-        <thead style="background-color: #a93226;  color: white">
-          <tr>
-            <th style="width:50%; text-align: center">Adresse</th>
-            <th style="width:15%; text-align: center">Téléphone</th>
-            <th style="width:15%; text-align: center">Fax</th>
-            <th style="width:20%; text-align: center">Région</th>
-        </thead>
-        <tbody style=" text-align: center">
-          <tr *ngFor="let tribunal of tribunaux">
-            <td style="text-align: center">{{tribunal.adresse}}</td>
-            <td style="text-align: center">{{tribunal.tel}}</td>
-            <td style="text-align: center">{{tribunal.fax}}</td>
-            <td style="text-align: center">{{tribunal.region}}</td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="container">
+    <div class="container">
+      <p style="color :#a93226; font-size:25px" class="text-align: center">Chercher par adresse</p>
+      <input type="text" id="icon_prefix" onkeyup="myFunction()" placeholder="Saisir l'adresse...">
     </div>
-  </form>
+  </div>
+</div>
+
+<div class="container">
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:50%; text-align: center" onclick="sortTable(0)">Adresse </th>
+      <th style="width:15%; text-align: center" >Téléphone </th>
+      <th style="width:15%; text-align: center">Fax</th>
+      <th style="width:20%; text-align: center" onclick="sortTable(1)">Région </th>
+    </tr>
+    <tr *ngFor="let tribunal of tribunaux">
+      <td style="text-align: center">{{tribunal.adresse}}</td>
+      <td style="text-align: center">{{tribunal.tel}}</td>
+      <td style="text-align: center">{{tribunal.fax}}</td>
+      <td style="text-align: center">{{tribunal.region}}</td>
+    </tr>
+  </table>
 </div>

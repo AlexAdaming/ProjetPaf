@@ -23,3 +23,48 @@ nav {
   input {
     color: #455a64
   }
+
+
+/* Style pour les tableaux */
+    * {
+      box-sizing: border-box;
+    }
+
+    #icon_prefix {
+      font-size: 18px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+    #myTable {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    #myTable th {
+      text-align: left;
+      padding: 12px;
+      background-color: #a93226;
+      color: white;
+    }
+
+    #myTable td {
+      text-align: left;
+      padding: 12px;
+      
+    }
+
+    #myTable tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #myTable tr.header,
+    #myTable tr:hover {
+      background-color: #f1f1f1;
+    }
+
+
+

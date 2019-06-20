@@ -1,7 +1,32 @@
-<div style="text-align:center">
-    <h3> Détails d'une tâche </h3>
-</div>
+<!-- Bandeau de Tête avec Image et Titre -->
+<img style="width:100%;" src="assets\Image\d-tache.png">
 
 <app-navbar></app-navbar>
 
-<br><br><br><br><br>
+<br><br>
+<div class="container">
+    <form>
+        <div>
+            <table id="myTable">
+                <tr class="header">
+                    <th style="width:20%;  text-align: center">Titre</th>
+                    <th style="width:40%;  text-align: center">Description</th>
+                    <th style="width:15%;  text-align: center">Date de Création</th>
+                    <th style="width:15%;  text-align: center">Affaire(s) associée(s)</th>
+                    <th style="width:10%;  text-align: center">Statut</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center">{{tacheActif.titre}}</td>
+                        <td style="text-align: center">{{tacheActif.description}}</td>
+                        <td style="text-align: center">{{tacheActif.dateCreation}}</td>
+                        <td style="text-align: center">{{tacheActif.affaires}}</td>
+                        <td style="text-align: center">{{tacheActif.statut}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+
+<br><br>

@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './site-avocat/navbar/navbar.component';
 import { FullCalendarComponent } from './site-avocat/full-calendar/full-calendar.component';
 import { APhaseComponent } from './site-avocat/a-phase/a-phase.component';
+import { EquipeComponent } from './site-avocat/equipe/equipe.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { APhaseComponent } from './site-avocat/a-phase/a-phase.component';
     LUtilisateursComponent,
     NavbarComponent,
     FullCalendarComponent,
-    APhaseComponent
+    APhaseComponent,
+    EquipeComponent
   ],
   imports: [
     BrowserModule,

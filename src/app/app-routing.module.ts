@@ -1,3 +1,4 @@
+import { EquipeComponent } from './site-avocat/equipe/equipe.component';
 import { APhaseComponent } from './site-avocat/a-phase/a-phase.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'l-tribunaux', component: LTribunauxComponent },
   { path: 'l-utilisateurs', component: LUtilisateursComponent },
   { path: 'calendrier', component: FullCalendarComponent },
+  { path: 'equipe', component: EquipeComponent },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
   { path: '*', component: LoginComponent },
 

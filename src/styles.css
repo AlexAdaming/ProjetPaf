@@ -15,4 +15,11 @@ nav {
   main {
     flex: 1 0 auto;
   }
-   
+
+  label {
+   color: #455a64
+  }
+ 
+  input {
+    color: #455a64
+  }

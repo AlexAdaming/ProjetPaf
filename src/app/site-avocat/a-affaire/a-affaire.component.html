@@ -10,6 +10,7 @@
 <!-- Code pour le Formulaire -->
 <div class="container">
     <div class="row">
+        <p style="text-align: center; color :#a93226; font-size:25px"><b>Affaire</b></p>
         <form class="col s12">
             <div class="row">
                 <div class="input-field col s6">
@@ -29,33 +30,99 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="statut" type="text" class="validate">
-                    <label for="statut">Statut</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
                     <select>
-                        <option value="0" disabled selected>Associer une Tâche à cette Affaire</option>
-                        <option value="1">T1</option>
-                        <option value="2">T2</option>
-                        <option value="3">T3</option>
+                        <option value="0" disabled selected>Statut de l'affaire</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                     </select>
                 </div>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="statut" type="text" class="validate">
-                    <label for="statut">Statut de l'Audience</label>
-                </div>
-            </div>
+            <!--Tâche  -->
+
             <div>
+                <div>
+                    <br><br>
+                    <hr>
+                    <br><br>
+                    <div class="container">
+                        <div class="container">
+                            <p style="text-align: center; color :#a93226; font-size:25px"><b>Création d'une tâche pour
+                                    cette
+                                    Affaire
+                                </b></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="dateCreation" type="text" class="datepicker">
+                                    <label for="dateCreation">Date de Création</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="titre2" type="text" class="validate">
+                                    <label for="titre2">Titre</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="description2" type="text" class="validate">
+                                    <label for="description2">Description</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="0" disabled selected>Statut de la tâche</option>
+                                        <option value="encours">En cours</option>
+                                        <option value="termine">Terminé</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Phase  -->
+
+                <div>
+                    <br><br>
+                    <hr>
+                    <br><br>
+                    <div class="container">
+                        <div class="container">
+                            <p style="text-align: center; color :#a93226; font-size:25px"><b>Création d'une phase pour
+                                    cette
+                                    Affaire
+                                </b></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <div class="input-field col s12">
+                                <input id="nom" type="text" class="validate">
+                                <label for="nom">Nom</label>
+                            </div>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="dateCreation" type="text" class="datepicker">
+                            <label for="dateCreation">Date de Création</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="dateFin" type="text" class="datepicker">
+                            <label for="dateFin">Date de Fin</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
                 <button style="text-align: center" class="waves-effect blue-grey darken-2 btn" type="submit"
                     name="action">Ajouter <i class="material-icons right">send</i>
                 </button>
+
             </div>
         </form>
     </div>
 </div>
-
-<p>zeihfezsoighqeroighqeroifdsssssdmg</p>
+<br><br>

@@ -81,7 +81,8 @@ export class FullCalendarComponent implements OnInit {
     this.eventData = [
       {
         title: 'event1',
-        start: '2019-06-22'
+        start: moment('2019-06-22'),
+        end: moment('2019-06-23').add(2, 'days')
       },
       {
         title: 'event2',

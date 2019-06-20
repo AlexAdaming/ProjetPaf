@@ -3,8 +3,6 @@
 
 <app-navbar></app-navbar>
 
-<br><br><br><br><br>
-
 <!-- Liste des Tribunaux -->
 <div class="container">
   <div class="container">
@@ -18,10 +16,10 @@
 <div class="container">
   <table id="myTable">
     <tr class="header">
-      <th style="width:50%; text-align: center" onclick="sortTable(0)">Adresse </th>
+      <th style="width:50%; text-align: center" onclick="sortTable(0)">Adresse <i style="align-items:right" class="material-icons">unfold_more</i></th>
       <th style="width:15%; text-align: center" >Téléphone </th>
       <th style="width:15%; text-align: center">Fax</th>
-      <th style="width:20%; text-align: center" onclick="sortTable(1)">Région </th>
+      <th style="width:20%; text-align: center" onclick="sortTable(1)">Région <i style="align-items:right" class="material-icons">unfold_more</i></th>
     </tr>
     <tr *ngFor="let tribunal of tribunaux">
       <td style="text-align: center">{{tribunal.adresse}}</td>
@@ -31,3 +29,5 @@
     </tr>
   </table>
 </div>
+
+<br><br><br>

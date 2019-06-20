@@ -3,22 +3,30 @@
 
 <app-navbar></app-navbar>
 
-<br><br><br><br><br>
-
 <!-- Liste Affaires -->
+<div class="container">
+    <div class="container">
+        <div class="container">
+            <p style="color :#a93226; font-size:25px" class="text-align: center">Chercher par titre</p>
+            <input type="text" id="icon_prefix" onkeyup="myFunction1()" placeholder="Saisir le titre...">
+        </div>
+    </div>
+</div>
 <div class="container">
     <form>
         <div>
-            <table id="example" class="display" style="width:100%">
-                <thead style="background-color: #a93226;  color: white">
-                    <tr>
-                        <th style="width:10%; text-align: center">Référence</th>
-                        <th style="width:20%; text-align: center;">Titre</th>
-                        <th style="width:40%; text-align: center;">Description</th>
-                        <th style="width:20%; text-align: center;">Status</th>
-                        <th style="width:10%; text-align: center;">Consulter</th>
-                    </tr>
-                </thead>
+            <table id="myTable">
+                <tr class="header">
+                    <th style="width:20%; text-align: center">Référence<i style="align-items:right"
+                        class="material-icons">unfold_more</i></th>
+                    <th style="width:15%; text-align: center" onclick="sortTable(0)">Titre<i style="align-items:right"
+                            class="material-icons">unfold_more</i></th>
+                    <th style="width:40%; text-align: center" onclick="sortTable(1)">Description<i
+                            style="align-items:right" class="material-icons">unfold_more</i></th>
+                    <th style="width:20%; text-align: center">Status<i style="align-items:right"
+                            class="material-icons">unfold_more</i></th>
+                    <th style="width:5%; text-align: center">Consulter</th>
+                </tr>
                 <tbody>
                     <tr *ngFor="let affaire of affaires">
                         <td style="text-align: center">{{affaire.reference}}</td>
@@ -35,3 +43,5 @@
         </div>
     </form>
 </div>
+
+<br><br><br>

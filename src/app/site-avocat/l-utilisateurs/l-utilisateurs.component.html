@@ -3,28 +3,34 @@
 
 <app-navbar></app-navbar>
 
-<br><br><br><br><br>
 
 <!-- DEBUT LISTE UTILISATEUR -->
 <div class="container">
-    <form>
-        <div>
-            <table id="example" class="display" style="width:100%">
-                <thead style="background-color: #a93226; color: white">
-                    <tr>
-                        <th style="width:30%; text-align: center">Prénom</th>
-                        <th style="width:30%; text-align: center">Nom</th>
-                        <th style="width:40%; text-align: center">Email</th>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let utilisateur of listUtilisateur">
-                        <td style="text-align: center">{{utilisateur.prenom}}</td>
-                        <td style="text-align: center">{{utilisateur.nom}}</td>
-                        <td style="text-align: center">{{utilisateur.email}}</td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="container">
+        <div class="container">
+            <p style="color :#a93226; font-size:25px" class="text-align: center">Chercher par prénom</p>
+            <input type="text" id="icon_prefix" onkeyup="myFunction()" placeholder="Saisir l'adresse...">
         </div>
-    </form>
+    </div>
+</div>
+
+<div class="container">
+    <table id="myTable">
+        <tr class="header">
+
+            <th style="width:30%; text-align: center" onclick="sortTable(0)">Prénom<i style="align-items:right" class="material-icons">unfold_more</i></th>
+            <th style="width:30%; text-align: center" onclick="sortTable(1)">Nom<i class="material-icons prefix">unfold_more</i></th>
+            <th style="width:40%; text-align: center">Email</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let utilisateur of listUtilisateur">
+                <td style="text-align: center">{{utilisateur.prenom}}</td>
+                <td style="text-align: center">{{utilisateur.nom}}</td>
+                <td style="text-align: center">{{utilisateur.email}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 <!-- FIN LISTE UTILISATEUR -->
+
+<br><br><br>

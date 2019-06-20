@@ -56,28 +56,6 @@
         autoClose: true,
         format: "dd/mm/yy"
       });
-
-      $('#example, #example2, #example3').DataTable(
-        {
-          "language": {
-            "sProcessing": "Traitement en cours...",
-            "sSearch": "Rechercher&nbsp;:",
-            "sLengthMenu": "Afficher MENU &eacute;l&eacute;ments",
-            "sInfo": "",
-            "sInfoEmpty": "",
-            "sInfoFiltered": "(filtr&eacute; de MAX &eacute;l&eacute;ments au total)",
-            "sInfoPostFix": "",
-            "sLoadingRecords": "Chargement en cours...",
-            "sZeroRecords": "Aucun &eacute;l&eacute;ment &agrave; afficher",
-            "sEmptyTable": "Aucune donn&eacute;e disponible dans le tableau",
-            "oPaginate": {
-              "sFirst": "Premier",
-              "sPrevious": "Pr&eacute;c&eacute;dent",
-              "sNext": "Suivant",
-              "sLast": "Dernier"
-            },
-          }
-        });
     });
   </script>
 
@@ -91,6 +69,24 @@
       tr = table.getElementsByTagName("tr");
       for (i = 0; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    function myFunction1() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("icon_prefix");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
         if (td) {
           txtValue = td.textContent || td.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {

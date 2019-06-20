@@ -8,7 +8,7 @@
 <!-- Formulaire ajout d'une Phase -->
 <div class="container">
   <div class="row">
-    <form class="col s12">
+    <form class="col s12" [formGroup]="form" (ngSubmit)="createPhase()">
       <div class="row">
         <div>
           <div class="input-field col s12">
@@ -22,18 +22,19 @@
         </div>
         <div>
           <div class="input-field col s12">
-            <input id="nom" type="text" class="validate">
+            <input id="nom" type="text" formControlName="nom" class="validate">
             <label for="nom">Nom</label>
           </div>
         </div>
         <div class="input-field col s6">
-          <input id="dateCreation" type="text" class="datepicker">
-          <label for="dateCreation">Date de Création</label>
+          <input id="dateDebut" type="text" formControlName="dateDebut" class="datepicker">
+          <label for="dateDebut">Date de Création</label>
         </div>
         <div class="input-field col s6">
-          <input id="dateFin" type="text" class="datepicker">
+          <input id="dateFin" type="text" formControlName="dateFin" class="datepicker">
           <label for="dateFin">Date de Fin</label>
         </div>
+        <button type="submit" class="btn waves-effect waves-light" name="action">Ajouter</button>
       </div>
     </form>
   </div>

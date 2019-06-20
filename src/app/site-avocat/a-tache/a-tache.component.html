@@ -9,20 +9,20 @@
 
 <div class="container">
     <div class="row">
-        <form class="col s12">
+        <form class="col s12" [formGroup]="form" (ngSubmit)="createTache()">
             <div class="row">
                 <div class="input-field col s6">
-                    <input id="dateCreation" type="text" class="datepicker">
+                    <input id="dateCreation" type="text" formControlName="dateCreation" class="datepicker">
                     <label for="dateCreation">Date de Création</label>
                 </div>
                 <div class="input-field col s6">
-                    <input id="titre" type="text" class="validate">
+                    <input id="titre" type="text" formControlName="titre" class="validate">
                     <label for="titre">Titre</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="description" type="text" class="validate">
+                    <input id="description" type="text" formControlName="description" class="validate">
                     <label for="description">Description</label>
                 </div>
             </div>

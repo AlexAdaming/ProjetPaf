@@ -11,20 +11,20 @@
 <div class="container">
     <div class="row">
         <p style="text-align: center; color :#a93226; font-size:25px"><b>Affaire</b></p>
-        <form class="col s12">
+        <form class="col s12" [formGroup]="form" (ngSubmit)="createAffaire()">
             <div class="row">
                 <div class="input-field col s6">
-                    <input id="Reference" type="text" class="validate">
-                    <label for="Reference">Référence</label>
+                    <input id="reference" type="text" formControlName="reference" class="validate">
+                    <label for="reference">Référence</label>
                 </div>
                 <div class="input-field col s6">
-                    <input id="titre" type="text" class="validate">
+                    <input id="titre" type="text" formControlName="titre" class="validate">
                     <label for="titre">Titre</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="description" type="text" class="validate">
+                    <input id="description" type="text" formControlName="description" class="validate">
                     <label for="description">Description</label>
                 </div>
             </div>
@@ -37,13 +37,15 @@
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
-                   
+                    <button style="text-align: center" class="waves-effect blue-grey darken-2 btn" type="submit"
+                    name="action">Ajouter <i class="material-icons right">send</i>
+                </button>
                 </div>
                 
             </div>
             <!--Tâche  -->
 
-            <div>
+            <!-- <div>
                 <div>
                     <br><br>
                     <hr>
@@ -85,11 +87,11 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> -->
 
                 <!--Phase  -->
 
-                <div>
+                <!-- <div>
                     <br><br>
                     <hr>
                     <br><br>
@@ -124,7 +126,7 @@
                     name="action">Ajouter <i class="material-icons right">send</i>
                 </button>
 
-            </div>
+            </div> -->
         </form>
     </div>
 </div>

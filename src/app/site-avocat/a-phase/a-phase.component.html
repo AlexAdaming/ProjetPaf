@@ -1,0 +1,40 @@
+<!-- Bandeau de Tête avec Image et Titre -->
+<img style="width:100%;" src="assets\Image\a-phase.jpeg">
+
+<app-navbar></app-navbar>
+
+<br><br><br><br><br>
+
+<!-- Formulaire ajout d'une Phase -->
+<div class="container">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div>
+          <div class="input-field col s12">
+            <select>
+              <option value="0" disabled selected>Selectionner une tâche à associer à cette phase</option>
+              <option value="1">T1</option>
+              <option value="2">T2</option>
+              <option value="3">T3</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div class="input-field col s12">
+            <input id="nom" type="text" class="validate">
+            <label for="nom">Nom</label>
+          </div>
+        </div>
+        <div class="input-field col s6">
+          <input id="dateCreation" type="text" class="datepicker">
+          <label for="dateCreation">Date de Création</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="dateFin" type="text" class="datepicker">
+          <label for="dateFin">Date de Fin</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

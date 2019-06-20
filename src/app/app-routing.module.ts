@@ -1,3 +1,4 @@
+import { APhaseComponent } from './site-avocat/a-phase/a-phase.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './site-avocat/login/login.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'a-tache', component: ATacheComponent },
   { path: 'd-tache', component: DTacheComponent },
   { path: 'd-tache/:id', component: DTacheComponent },
+  { path: 'a-phase', component: APhaseComponent },
   { path: 'd-document', component: DDocumentComponent },
   { path: 'd-document/:id', component: DDocumentComponent },
   { path: 'l-tribunaux', component: LTribunauxComponent },

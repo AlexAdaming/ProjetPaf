@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './site-avocat/navbar/navbar.component';
 import { FullCalendarComponent } from './site-avocat/full-calendar/full-calendar.component';
+import { APhaseComponent } from './site-avocat/a-phase/a-phase.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FullCalendarComponent } from './site-avocat/full-calendar/full-calendar
     LTribunauxComponent,
     LUtilisateursComponent,
     NavbarComponent,
-    FullCalendarComponent
+    FullCalendarComponent,
+    APhaseComponent
   ],
   imports: [
     BrowserModule,

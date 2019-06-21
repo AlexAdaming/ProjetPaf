@@ -7,6 +7,46 @@
 
 <!-- Body de la Page -->
 <!-- Liste des Tâches associées -->
+<h5 style="text-align: center">Tâche</h5>
+<div class="container">
+    <form>
+        <div>
+            <table id="myTable">
+                <tr class="header">
+                    <th style="width:20%; text-align: center" onclick="sortTable(0)">Titre<i style="align-items:right"
+                            class="material-icons">unfold_more</i></th>
+                    <th style="width:25%; text-align: center" onclick="sortTable(1)">Date de Création<i
+                            style="align-items:right" class="material-icons">unfold_more</i></th>
+                    <th style="width:40%; text-align: center" onclick="sortTable(2)">Description<i
+                            style="align-items:right" class="material-icons">unfold_more</i></th>
+                    <th style="width:10%; text-align: center" onclick="sortTableChiffre()">Status<i
+                            style="align-items:right" class="material-icons">unfold_more</i></th>
+                    <th style="width:5%; text-align: center">Consulter</th>
+                </tr>
+                <tbody>
+                    <tr *ngFor="let affaire of affaires">
+                        <td style="text-align: center">Inserer code</td>
+                        <td style="text-align: center">Inserer code</td>
+                        <td style="text-align: center">Inserer code</td>
+                        <td style="text-align: center">Inserer code</td>
+                        <td>
+                            <a class="waves-effect blue-grey darken-2 btn"><i
+                                    class="material-icons">remove_red_eye</i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+
+<br><br>
+<div class="container">
+    <hr>
+</div>
+<br><br>
+
+
 <div class="container">
     <h5 style="text-align: center">Liste des phases associées</h5>
     <ul class="collapsible">

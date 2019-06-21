@@ -1,7 +1,8 @@
-import { DocumentService } from './../../services/document.service';
 import { Component, OnInit } from '@angular/core';
 import { CalendarService } from './../../services/calendar.service';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import { TacheService } from 'src/app/services/tache.service';
+
 
 @Component({
   selector: 'app-accueil',
@@ -10,10 +11,11 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 })
 export class AccueilComponent implements OnInit {
   documents;
+  events;
   calendarEvents;
   calendarPlugins = [dayGridPlugin];
 
-  constructor(private calendarService: CalendarService, private documentService: DocumentService) { }
+  constructor(private calendarService: CalendarService, private tacheService: TacheService) { }
 
   ngOnInit() {
 
@@ -21,9 +23,17 @@ export class AccueilComponent implements OnInit {
       this.calendarEvents = data1;
     });
 
-    this.documentService.getDocuments().subscribe(data2 => {
-      this.documents = data2;
-    });
+    // this.list();
+    // console.log(this.events);
+
   }
+
+  // list() {
+  //   this.tacheService.getTaches().subscribe(data3 => {
+  //     this.events = data3;
+  //   });
+  // }
+
+
 
 }

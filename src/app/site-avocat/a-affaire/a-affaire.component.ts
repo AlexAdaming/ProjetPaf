@@ -18,7 +18,8 @@ export class AAffaireComponent implements OnInit {
     this.form = this.formBuilder.group({
       reference: ['', Validators.required],
       titre: ['', Validators.required],
-      description: ['', Validators.required]
+      description: ['', Validators.required],
+      status: ['', [Validators.required, Validators.max(3)]]
     });
   }
 

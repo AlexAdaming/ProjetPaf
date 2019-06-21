@@ -1,6 +1,8 @@
 <!-- Bandeau de Tête avec Image et Titre -->
 <img style="width:100%;" src="assets\Image\a-affaire.png">
 
+
+
 <app-navbar></app-navbar>
 
 <br><br><br><br><br>
@@ -31,17 +33,22 @@
             <p style="text-align: center; color :#455a64">Statut de l'affaire 1: A venir - 2: En cours - 3: Archivée</p>
             <div class="row">
                 <div class="input-field col s12">
-                    <select>
+
+                    <input id="status" type="number" formControlName="status" class="validate" min="0" max="3">
+                    
+                    <label for="status">Status de l'affaire</label>
+
+                    <!-- <select>
                         <option value="0" disabled selected>Statut de l'affaire</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                    </select>
+                    </select> -->
                     <button style="text-align: center" class="waves-effect blue-grey darken-2 btn" type="submit"
-                    name="action">Ajouter <i class="material-icons right">send</i>
-                </button>
+                        name="action" [disabled]=form.invalid>Ajouter <i class="material-icons right">send</i>
+                    </button>
                 </div>
-                
+
             </div>
             <!--Tâche  -->
 
@@ -89,9 +96,9 @@
                     </div>
                 </div> -->
 
-                <!--Phase  -->
+            <!--Phase  -->
 
-                <!-- <div>
+            <!-- <div>
                     <br><br>
                     <hr>
                     <br><br>

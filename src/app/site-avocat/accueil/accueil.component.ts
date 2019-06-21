@@ -3,7 +3,6 @@ import { CalendarService } from './../../services/calendar.service';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { TacheService } from 'src/app/services/tache.service';
 
-
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',

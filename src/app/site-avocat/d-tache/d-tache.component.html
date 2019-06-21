@@ -4,29 +4,109 @@
 <app-navbar></app-navbar>
 
 <br><br>
+
+<!-- Body de la Page -->
+<!-- Liste des Tâches associées -->
+<div class="container">
+    <h5 style="text-align: center">Liste des phases associées</h5>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header" style="background-color: #a93226; color: white"><i
+                    class="material-icons">add_circle_outline</i>Afficher la liste des phases associées</div>
+            <div class="collapsible-body">
+                <form>
+                    <div>
+                        <table id="myTable">
+                            <tr id="header">
+                                <th style="width:80%; text-align: center" onclick="sortTable(0)">Nom<i
+                                        style="align-items:right" class="material-icons">unfold_more</i></th>
+                                <th style="width:20%; text-align: center" onclick="sortTable(1)">Consulter</th>
+                            </tr>
+                            <tbody>
+                                <tr style="text-align: center">
+                                    <td style="text-align: center">inserer code </td>
+                                    <td style="text-align: center">
+                                        <a class="waves-effect blue-grey darken-2 btn"><i
+                                                class="material-icons">remove_red_eye</i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<br><br><br><br>
+<div class=container>
+    <hr>
+</div>
+<br>
+
+<!-- Tribunal associées -->
 <div class="container">
     <form>
+        <h5 style="text-align: center">Tribunal Associé</h5>
         <div>
             <table id="myTable">
-                <tr class="header">
-                    <th style="width:20%;  text-align: center">Titre</th>
-                    <th style="width:40%;  text-align: center">Description</th>
-                    <th style="width:15%;  text-align: center">Date de Création</th>
-                    <th style="width:15%;  text-align: center">Affaire(s) associée(s)</th>
-                    <th style="width:10%;  text-align: center">Statut</th>
+                <tr id="header">
+                    <th style="width:50%; text-align: center">Adresse </th>
+                    <th style="width:15%; text-align: center">Téléphone </th>
+                    <th style="width:15%; text-align: center">Fax</th>
+                    <th style="width:20%; text-align: center">Région </th>
                 </tr>
                 <tbody>
                     <tr>
-                        <td style="text-align: center">{{tacheActif.titre}}</td>
-                        <td style="text-align: center">{{tacheActif.description}}</td>
-                        <td style="text-align: center">{{tacheActif.dateCreation}}</td>
-                        <td style="text-align: center">{{tacheActif.affaires}}</td>
-                        <td style="text-align: center">{{tacheActif.statut}}</td>
+                        <td style="text-align: center">inserer code </td>
+                        <td style="text-align: center">inserer code </td>
+                        <td style="text-align: center">inserer code </td>
+                        <td style="text-align: center">inserer code </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </form>
+</div>
+
+<br><br><br><br>
+<div class=container>
+    <hr>
+</div>
+<br>
+
+<!-- Liste des Affaires associées -->
+<div class="container">
+    <h5 style="text-align: center">Liste des affaires associées</h5>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header" style="background-color: #a93226; color: white"><i
+                    class="material-icons">add_circle_outline</i>Afficher la liste des affaires associées</div>
+            <div class="collapsible-body">
+                <form>
+                    <div>
+                        <table id="myTable">
+                            <tr id="header">
+                                <th style="width:80%; text-align: center" onclick="sortTable(0)">Titre<i
+                                        style="align-items:right" class="material-icons">unfold_more</i></th>
+                                <th style="width:20%; text-align: center">Consulter</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center">inserer code</td>
+                                    <td style="text-align: center">
+                                        <a class="waves-effect blue-grey darken-2 btn"><i
+                                                class="material-icons">remove_red_eye</i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </li>
+    </ul>
 </div>
 
 <br><br>

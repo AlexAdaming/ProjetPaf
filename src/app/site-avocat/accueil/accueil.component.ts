@@ -9,21 +9,42 @@ import { TacheService } from 'src/app/services/tache.service';
   styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent implements OnInit {
-  documents;
-  events;
-  calendarEvents;
   calendarPlugins = [dayGridPlugin];
+  calendarEvents = [
+    {
+      "start": "2019-06-16",
+      "title": "tribunal"
+    },
+    {
+      "start": "2019-06-15",
+      "title": "reunion"
+    },
+    {
+      "start": "2019-06-14",
+      "title": "client"
+    },
+    {
+      "start": "2019-06-16",
+      "title": "police"
+    }
+  ];
+
+  events;
 
   constructor(private calendarService: CalendarService, private tacheService: TacheService) { }
 
   ngOnInit() {
 
-    this.calendarService.getData().subscribe(data1 => {
-      this.calendarEvents = data1;
-    });
+    // ----- METHODE QUI RECUPERE LES DONNEES DANS LE FICHIER JSON -----
+    // this.calendarService.getData().subscribe(data1 => {
+    //   this.calendarEvents = data1;
+    // });
 
+    // ----- METHODE QUI NE FONCTIONNE PAS -----
     // this.list();
     // console.log(this.events);
+
+
 
   }
 
@@ -32,7 +53,5 @@ export class AccueilComponent implements OnInit {
   //     this.events = data3;
   //   });
   // }
-
-
 
 }

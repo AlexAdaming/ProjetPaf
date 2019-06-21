@@ -1,20 +1,31 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Utilisateur } from '../models/utilisateur';
+import { FormBuilder } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilisateurService {
 
-  documentUrl = 'http://localhost:8080/apiUtilisateur';
+  utilisateurUrl = 'http://localhost:8080/apiUtilisateur';
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+  };
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private formBuilder: FormBuilder) { }
 
   getUtilisateurs() {
-    return this.http.get(this.documentUrl + '/utilisateurs');
+    return this.http.get(this.utilisateurUrl + '/utilisateurs');
   }
 
   getUtilisateur(id: number) {
-    return this.http.get(this.documentUrl + '/utilisateur/' + id);
+    return this.http.get(this.utilisateurUrl + '/utilisateur/' + id);
   }
+
+  addAffaire(utilisateur: Utilisateur) {
+    return this.http.post(this.utilisateurUrl + '/ajouterUt', JSON.stringify(utilisateur),
+    this.httpOptions);
+  }
+
 }

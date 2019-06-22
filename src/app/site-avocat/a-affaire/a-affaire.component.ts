@@ -27,7 +27,7 @@ export class AAffaireComponent implements OnInit {
     console.log(this.form.value);
     if (this.form.valid) {
       this.affaireService.addAffaire(this.form.value).subscribe(() => {
-        this.router.navigate(['/a-affaire']);
+        this.router.navigate(['/l-affaires']);
         this.form.reset();
       });
     }

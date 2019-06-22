@@ -1,149 +1,152 @@
- <!-- Bandeau de Tête avec Image et Titre -->
+<!-- Bandeau de Tête avec Image et Titre -->
 <img style="width:100%;" src="assets\Image\d-affaire.png">
- 
- <!-- Body de la Page -->
-    <!-- Détail du document -->
-    <br><br><br>
-    <h5 style="text-align: center">Affaire</h5>
-        <div class="container">
-            <form>
-                <div>
-                    <table id="myTable">
-                        <tr class="header">
-                            <th style="width:20%; text-align: center" onclick="sortTable(0)">Référence<i style="align-items:right"
-                                class="material-icons">unfold_more</i></th>
-                            <th style="width:25%; text-align: center" onclick="sortTable(1)">Titre<i style="align-items:right"
-                                    class="material-icons">unfold_more</i></th>
-                            <th style="width:40%; text-align: center" onclick="sortTable(2)">Description<i
-                                    style="align-items:right" class="material-icons">unfold_more</i></th>
-                            <th style="width:10%; text-align: center" onclick="sortTableChiffre()">Status<i style="align-items:right"
-                                    class="material-icons">unfold_more</i></th>
-                            <th style="width:5%; text-align: center">Consulter</th>
-                        </tr>
-                        <tbody>
-                            <tr *ngFor="let affaire of affaires">
-                                <td style="text-align: center">{{affaireActif.reference}}</td>
-                                <td style="text-align: center">{{affaireActif.titre}}</td>
-                                <td style="text-align: center">{{affaireActif.description}}</td>
-                                <td style="text-align: center">{{affaireActif.status}}</td>
-                                <td class="waves-effect waves-light btn-small"><i class="material-icons left">edit</i>Modifier le status</td>
-                                    <a class="waves-effect blue-grey darken-2 btn"><i
-                                            class="material-icons">remove_red_eye</i></a>
-                                
+
+<app-navbar></app-navbar>
+
+<br><br><br><br><br>
+
+<!-- Détail du document -->
+<br><br><br>
+<h5 style="text-align: center">Affaire</h5>
+<div class="container">
+    <form>
+        <div>
+            <table id="myTable">
+                <tr class="header">
+                    <th style="width:20%; text-align: center" onclick="sortTable(0)">Référence<i
+                            style="align-items:right" class="material-icons">unfold_more</i></th>
+                    <th style="width:25%; text-align: center" onclick="sortTable(1)">Titre<i style="align-items:right"
+                            class="material-icons">unfold_more</i></th>
+                    <th style="width:40%; text-align: center" onclick="sortTable(2)">Description<i
+                            style="align-items:right" class="material-icons">unfold_more</i></th>
+                    <th style="width:10%; text-align: center" onclick="sortTableChiffre()">Status<i
+                            style="align-items:right" class="material-icons">unfold_more</i></th>
+                    <th style="width:5%; text-align: center">Consulter</th>
+                </tr>
+                <tbody>
+                    <tr *ngFor="let affaire of affaires">
+                        <td style="text-align: center">{{affaireActif.reference}}</td>
+                        <td style="text-align: center">{{affaireActif.titre}}</td>
+                        <td style="text-align: center">{{affaireActif.description}}</td>
+                        <td style="text-align: center">{{affaireActif.status}}</td>
+                        <td class="waves-effect waves-light btn-small"><i class="material-icons left">edit</i>Modifier
+                            le status</td>
+                        <a class="waves-effect blue-grey darken-2 btn"><i class="material-icons">remove_red_eye</i></a>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+
+<br><br>
+<div class="container">
+    <hr>
+</div>
+<br><br>
+
+<div class="container">
+    <h5 style="text-align: center">Listes des Tâches associées</h5>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header" style="background-color: #a93226; color: white"><i
+                    class="material-icons">add_circle_outline</i>Afficher la liste des tâches associées</div>
+            <div class="collapsible-body">
+                <form>
+                    <div>
+                        <table id="myTable">
+                            <tr id="header">
+                                <th style="width:80%; text-align: center" onclick="sortTable(0)">Titre<i
+                                        style="align-items:right" class="material-icons">unfold_more</i></th>
+                                <th style="width:20%; text-align: center">Consulter</th>
                             </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </form>
-        </div>
-    
-        <br><br>
-        <div class="container">
-            <hr>
-        </div>
-        <br><br>
-      
-        <div class="container">
-            <h5 style="text-align: center">Listes des Tâches associées</h5>
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header" style="background-color: #a93226; color: white"><i
-                            class="material-icons">add_circle_outline</i>Afficher la liste des tâches associées</div>
-                    <div class="collapsible-body">
-                        <form>
-                            <div>
-                                <table id="myTable">
-                                    <tr id="header">
-                                        <th style="width:80%; text-align: center" onclick="sortTable(0)">Titre<i
-                                                style="align-items:right" class="material-icons">unfold_more</i></th>
-                                        <th style="width:20%; text-align: center">Consulter</th>
-                                    </tr>
-                                    <tbody>
-                                        <tr>
-                                            <td style="text-align: center">Inserer code</td>
-                                            <td style="text-align: center">
-                                                <a class="waves-effect blue-grey darken-2 btn"><i
-                                                        class="material-icons">remove_red_eye</i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </form>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center">Inserer code</td>
+                                    <td style="text-align: center">
+                                        <a class="waves-effect blue-grey darken-2 btn"><i
+                                                class="material-icons">remove_red_eye</i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </li>
-            </ul>
-        </div>
-        
-        <br><br>
-        <div class="container">
-            <hr>
-        </div>
-        <br><br>
-        
-        <div class="container">
-            <h5 style="text-align: center">Listes des Documents associées</h5>
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header" style="background-color: #a93226; color: white"><i
-                            class="material-icons">add_circle_outline</i>Afficher la liste des documents associées</div>
-                    <div class="collapsible-body">
-                        <form>
-        
-                            <div>
-                                <table id="myTable">
-                                    <tr id="header">
-                                        <th style="width:80%; text-align: center" onclick="sortTable(0)">Nom<i style="
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<br><br>
+<div class="container">
+    <hr>
+</div>
+<br><br>
+
+<div class="container">
+    <h5 style="text-align: center">Listes des Documents associées</h5>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header" style="background-color: #a93226; color: white"><i
+                    class="material-icons">add_circle_outline</i>Afficher la liste des documents associées</div>
+            <div class="collapsible-body">
+                <form>
+
+                    <div>
+                        <table id="myTable">
+                            <tr id="header">
+                                <th style="width:80%; text-align: center" onclick="sortTable(0)">Nom<i style="
                                             align-items:right" class="material-icons">unfold_more</i></th>
-                                        <th style="width:20%; text-align: center">Consulter</th>
-                                    </tr>
-                                    <tbody>
-                                        <tr>
-                                            <td style="text-align: center">Insere code</td>
-                                            <td style="text-align: center">
-                                                <a class="waves-effect  blue-grey darken-2 btn"><i
-                                                        class="material-icons">remove_red_eye</i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </form>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        
-        <br><br>
-        <div class="container">
-            <hr>
-        </div>
-        <br><br>
-        
-        <div class="container">
-            <form>
-                <h5 style="text-align: center">Tribunal Associé</h5>
-                <div>
-                    <table id="myTable">
-                        <tr id="header">
-                            <th style="width:40%; text-align: center">Adresse</th>
-                            <th style="width:20%;text-align: center">Téléphone</th>
-                            <th style="width:20%;text-align: center">Fax</th>
-                            <th style="width:20%;text-align: center">Région</th>
-                        </tr>
-                        <tbody>
-                            <tr>
-                                <td style="text-align: center">Insere code</td>
-                                <td style="text-align: center">Inserer code</td>
-                                <td style="text-align: center">Inserer code</td>
-                                <td style="text-align: center">Inserer code</td>
+                                <th style="width:20%; text-align: center">Consulter</th>
                             </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </form>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center">Insere code</td>
+                                    <td style="text-align: center">
+                                        <a class="waves-effect  blue-grey darken-2 btn"><i
+                                                class="material-icons">remove_red_eye</i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<br><br>
+<div class="container">
+    <hr>
+</div>
+<br><br>
+
+<div class="container">
+    <form>
+        <h5 style="text-align: center">Tribunal Associé</h5>
+        <div>
+            <table id="myTable">
+                <tr id="header">
+                    <th style="width:40%; text-align: center">Adresse</th>
+                    <th style="width:20%;text-align: center">Téléphone</th>
+                    <th style="width:20%;text-align: center">Fax</th>
+                    <th style="width:20%;text-align: center">Région</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center">Insere code</td>
+                        <td style="text-align: center">Inserer code</td>
+                        <td style="text-align: center">Inserer code</td>
+                        <td style="text-align: center">Inserer code</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        
-        
-        
-        <br><br>
+    </form>
+</div>
+
+
+
+<br><br>

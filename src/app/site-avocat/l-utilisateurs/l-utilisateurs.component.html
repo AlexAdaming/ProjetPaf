@@ -3,6 +3,7 @@
 
 <app-navbar></app-navbar>
 
+<br><br><br><br><br>
 
 <!-- DEBUT LISTE UTILISATEUR -->
 <div class="container">
@@ -18,19 +19,26 @@
     <table id="myTable">
         <tr class="header">
 
-            <th style="width:30%; text-align: center" onclick="sortTable(0)">Prénom<i style="align-items:right" class="material-icons">unfold_more</i></th>
-            <th style="width:30%; text-align: center" onclick="sortTable(1)">Nom<i class="material-icons prefix">unfold_more</i></th>
-            <th style="width:40%; text-align: center">Email</th>
+            <th style="width:30%; text-align: center" onclick="sortTable(0)">Prénom<i style="align-items:right"
+                    class="material-icons">unfold_more</i></th>
+            <th style="width:30%; text-align: center" onclick="sortTable(1)">Nom<i
+                    class="material-icons prefix">unfold_more</i></th>
+            <th style="width:35%; text-align: center">Email</th>
+            <th style="width:15%; text-align: center">Modifier</th>
         </tr>
         <tbody>
             <tr *ngFor="let utilisateur of listUtilisateur">
                 <td style="text-align: center">{{utilisateur.prenom}}</td>
                 <td style="text-align: center">{{utilisateur.nom}}</td>
                 <td style="text-align: center">{{utilisateur.email}}</td>
+                <td>
+                    <a routerLink="/m-utilisateur/{{utilisateur.idUtilisateur}}"
+                        class="waves-effect blue-grey darken-2 btn">
+                        <i class="material-icons">remove_red_eye</i> </a>
+                </td>
             </tr>
         </tbody>
     </table>
 </div>
-<!-- FIN LISTE UTILISATEUR -->
 
-<br><br><br>
+<br><br>

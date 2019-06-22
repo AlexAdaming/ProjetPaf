@@ -15,6 +15,7 @@ import { LTribunauxComponent } from './site-avocat/l-tribunaux/l-tribunaux.compo
 import { LUtilisateursComponent } from './site-avocat/l-utilisateurs/l-utilisateurs.component';
 import { FullCalendarComponent } from './site-avocat/full-calendar/full-calendar.component';
 import { AUtilisateurComponent } from './site-avocat/a-utilisateur/a-utilisateur.component';
+import { MUtilisateurComponent } from './site-avocat/m-utilisateur/m-utilisateur.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -31,8 +32,10 @@ const routes: Routes = [
   { path: 'd-document', component: DDocumentComponent },
   { path: 'd-document/:id', component: DDocumentComponent },
   { path: 'l-tribunaux', component: LTribunauxComponent },
-  { path: 'l-utilisateurs', component: LUtilisateursComponent },
   { path: 'a-utilisateur', component: AUtilisateurComponent },
+  { path: 'l-utilisateurs', component: LUtilisateursComponent },
+  { path: 'm-utilisateur', component: MUtilisateurComponent },
+  { path: 'm-utilisateur/:id', component: MUtilisateurComponent },
   { path: 'calendrier', component: FullCalendarComponent },
   { path: 'equipe', component: EquipeComponent },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },

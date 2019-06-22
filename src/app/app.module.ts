@@ -22,6 +22,7 @@ import { FullCalendarComponent } from './site-avocat/full-calendar/full-calendar
 import { APhaseComponent } from './site-avocat/a-phase/a-phase.component';
 import { EquipeComponent } from './site-avocat/equipe/equipe.component';
 import { AUtilisateurComponent } from './site-avocat/a-utilisateur/a-utilisateur.component';
+import { MUtilisateurComponent } from './site-avocat/m-utilisateur/m-utilisateur.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AUtilisateurComponent } from './site-avocat/a-utilisateur/a-utilisateur
     FullCalendarComponent,
     APhaseComponent,
     EquipeComponent,
-    AUtilisateurComponent
+    AUtilisateurComponent,
+    MUtilisateurComponent
   ],
   imports: [
     BrowserModule,

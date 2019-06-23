@@ -39,23 +39,21 @@
       $('.dropdown-trigger').dropdown();
       $('select').formSelect();
       $('.parallax').parallax();
-      $('.carousel').carousel();
       $('.datepicker').datepicker({
         i18n: {
           selectMonths: true,
           selectYears: 2,
-          monthsFull: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+          months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
           monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
-          weekdaysFull: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+          weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
           weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
-          weekdaysLetter: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+          weekdaysAbbrev: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
           today: 'Aujourd\'hui',
-          clear: 'Réinitialiser',
+          cancel: 'Annuler',
           close: 'Fermer',
-          format: 'dd/mm/yyyy'
         },
-        autoClose: true,
-        format: "dd/mm/yy"
+        autoClose: false,
+        format: "dd/mm/yyyy"
       });
     });
   </script>
@@ -151,62 +149,6 @@
           set the direction to "desc" and run the while loop again. */
           if (switchcount == 0 && dir == "asc") {
             dir = "desc";
-            switching = true;
-          }
-        }
-      }
-    }
-
-// Trier les nombres -- Ne focntionne pas !!!!!
-function sortTableChiffre() {
-      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-      table = document.getElementById("myTable");
-      switching = true;
-      // Set the sorting direction to ascending:
-      dir = "increase";
-      /* Make a loop that will continue until
-      no switching has been done: */
-      while (switching) {
-        // Start by saying: no switching is done:
-        switching = false;
-        rows = table.rows;
-        /* Loop through all table rows (except the
-        first, which contains table headers): */
-        for (i = 1; i < (rows.length - 1); i++) {
-          // Start by saying there should be no switching:
-          shouldSwitch = false;
-          /* Get the two elements you want to compare,
-          one from current row and one from the next: */
-          x = rows[i].getElementsByTagName("TD")[0];
-          y = rows[i + 1].getElementsByTagName("TD")[0];
-          /* Check if the two rows should switch place,
-          based on the direction, asc or desc: */
-          if (dir == "increase") {
-            if (Number(x.innerHTML) > Number(y.innerHTML)) {
-              // If so, mark as a switch and break the loop:
-              shouldSwitch = true;
-              break;
-            }
-          } else if (dir == "decrease") {
-            if (Number(x.innerHTML) < Number(y.innerHTML)) {
-              // If so, mark as a switch and break the loop:
-              shouldSwitch = true;
-              break;
-            }
-          }
-        }
-        if (shouldSwitch) {
-          /* If a switch has been marked, make the switch
-          and mark that a switch has been done: */
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-          // Each time a switch is done, increase this count by 1:
-          switchcount++;
-        } else {
-          /* If no switching has been done AND the direction is "asc",
-          set the direction to "desc" and run the while loop again. */
-          if (switchcount == 0 && dir == "increase") {
-            dir = "decrease";
             switching = true;
           }
         }

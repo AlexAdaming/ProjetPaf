@@ -1,27 +1,42 @@
-<app-navbar></app-navbar>
-
-<br><br><br><br><br>
-
-<div class="section white">
-    <div class="row container">
-        <h2 class="header">Compte utilisateur</h2>
-        <p class="grey-text text-darken-3 lighten-3">Ici ce trouve les infos personnelle de l'utilisateur</p>
+<html>
+<!-- <header>
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header" style="color:#a93226">Compte utilisateur</h2>
+            <p class="grey-text text-darken-3 lighten-3">Ici ce trouve les infos personnelle de l'utilisateur</p>
+        </div>
     </div>
-</div>
 
-<div class="contenair">
-    <div class="row">
-        <div class="col s12 offset-s5">
-            <div class="input-fiel col s3 "><br>
-                Nom : <input placeholder="Nom" id="nom" type="text" class="validate">
-                Prenom : <input placeholder="Prénom" id="prenom" type="text" class="validate">
-                Email : <input placeholder="exemple@avocat.fr" id="email" type="text" class="validate">
+</header> -->
 
-                <div class="center-align">
-                    <a class="btn">Valider </a>
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+<app-navbar></app-navbar>
+<br><br><br><br>
+
+<body>
+    <div class="contenair">
+        <div class="row">
+            <div class="col s12 offset-s5">
+                <div class="form-group col s3" style="background-color: white; border: solid; border-color: #455a64">
+                    <br>
+                    <form [formGroup]="form">
+                        <p>Nom : <input placeholder="GANDER" id="nom" type="text" class="validate"></p>
+                        <p>Prenom : <input placeholder="Victor" id="prenom" type="text" class="validate"> </p>
+                        <p>Email : <input placeholder="victorg@gmail.com" id="email" type="text" class="form-control"
+                                formControlName="email"></p>
+                        <p *ngIf="form.get('email').invalid && form.get('email').touched" style="color: crimson">
+                            Format email obligatoire</p><br>
+                    </form>
+
+                    <div class="center-align">
+                        <a class="btn">Valider </a> &nbsp;&nbsp;&nbsp;
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i
+                                class="material-icons">add</i></a>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+
+</html>

@@ -1,5 +1,8 @@
+import { Router } from '@angular/router';
+import { UtilisateurService } from './../../services/utilisateur.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, Validators } from '@angular/forms';
+import { resetFakeAsyncZone } from '@angular/core/testing';
 
 @Component({
   selector: 'app-login',
@@ -8,20 +11,26 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder) { }
+  validation;
 
-  form: FormGroup;
+  constructor(private utilisateurService: UtilisateurService, private router: Router) { }
 
-  ngOnInit() {
-    this.form = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      mdp: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]]
+  ngOnInit() { }
+
+  verifier(email, mdp) {
+    this.utilisateurService.validate(email, mdp).subscribe(data => {
+      if (data) {
+        this.router.navigate(['acceuil/', email]);
+      } else {
+        if (confirm('mauvais mot de passe')) {
+          this.router.navigate(['/login']);
+        }
+      }
+      // this.validation = data;
+      // console.log(data);
     });
-  }
-
-  onSubmit() {
-    // console.log(this.form.value);
-    const login = this.form.value;
-    console.log(login);
+    // if (this.validation) {
+    //   this.router.navigate(['acceuil/', email]);
+    // } else { this.router.navigate(['/login']); }
   }
 }

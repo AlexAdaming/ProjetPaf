@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: 'equipe', component: EquipeComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '*', component: LoginComponent },
+  { path: 'acceuil/:email', component: AccueilComponent },
 
 ];
 

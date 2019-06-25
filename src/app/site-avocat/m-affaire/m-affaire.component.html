@@ -1,0 +1,29 @@
+<!-- Bandeau de Tête avec Image et Titre -->
+<img style="width:100%;" src="assets\Image\m-affaire.jpeg">
+
+<app-navbar></app-navbar>
+
+<br><br><br><br><br>
+
+<div class="container">
+  <div class="container">
+    <div class="container">
+      <p style="color :#a93226; font-size:25px" class="text-align: center">Modifier le statut</p>
+    </div>
+  </div>
+</div>
+
+<form class="col s12" [formGroup]='editForm' (ngSubmit)='update()'>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="status" type="text" formControlName="status" class="validate">
+      <label for="status">Status</label>
+    </div>
+    <p style="text-align: center; color :#455a64">Statut de l'affaire 1: A venir - 2: En cours - 3: Archivée</p>
+
+    <button style="text-align: center" class="waves-effect blue-grey darken-2 btn" type="submit" name="action"
+      [disabled]=form.invalid>Modifier<i class="material-icons right">send</i>
+    </button>
+
+  </div>
+</form>

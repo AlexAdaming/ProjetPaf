@@ -10,7 +10,7 @@ export class AffaireService {
 
   affaireUrl = 'http://localhost:8080/apiAffaire';
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
   constructor(private http: HttpClient, private formBuilder: FormBuilder) { }
@@ -25,7 +25,11 @@ export class AffaireService {
 
   addAffaire(affaire: Affaire) {
     return this.http.post(this.affaireUrl + '/ajouterAffaire', JSON.stringify(affaire),
-    this.httpOptions);
+      this.httpOptions);
   }
 
+  updateAffaire(affaire: Affaire) {
+    return this.http.put(this.affaireUrl + '/updateAffaire', JSON.stringify(affaire),
+      this.httpOptions);
+  }
 }

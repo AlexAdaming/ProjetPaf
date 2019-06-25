@@ -23,19 +23,13 @@
                     class="material-icons">unfold_more</i></th>
             <th style="width:30%; text-align: center" onclick="sortTable(1)">Nom<i
                     class="material-icons prefix">unfold_more</i></th>
-            <th style="width:35%; text-align: center">Email</th>
-            <th style="width:15%; text-align: center">Modifier</th>
+            <th style="width:40%; text-align: center">Email</th>
         </tr>
         <tbody>
             <tr *ngFor="let utilisateur of listUtilisateur">
                 <td style="text-align: center">{{utilisateur.prenom}}</td>
                 <td style="text-align: center">{{utilisateur.nom}}</td>
                 <td style="text-align: center">{{utilisateur.email}}</td>
-                <td>
-                    <a routerLink="/m-utilisateur/{{utilisateur.idUtilisateur}}"
-                        class="waves-effect blue-grey darken-2 btn">
-                        <i class="material-icons">remove_red_eye</i> </a>
-                </td>
             </tr>
         </tbody>
     </table>

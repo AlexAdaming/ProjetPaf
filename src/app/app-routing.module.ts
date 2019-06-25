@@ -1,3 +1,4 @@
+import { MAffaireComponent } from './site-avocat/m-affaire/m-affaire.component';
 import { EquipeComponent } from './site-avocat/equipe/equipe.component';
 import { APhaseComponent } from './site-avocat/a-phase/a-phase.component';
 import { NgModule } from '@angular/core';
@@ -13,13 +14,12 @@ import { DTacheComponent } from './site-avocat/d-tache/d-tache.component';
 import { DDocumentComponent } from './site-avocat/d-document/d-document.component';
 import { LTribunauxComponent } from './site-avocat/l-tribunaux/l-tribunaux.component';
 import { LUtilisateursComponent } from './site-avocat/l-utilisateurs/l-utilisateurs.component';
-import { FullCalendarComponent } from './site-avocat/full-calendar/full-calendar.component';
 import { AUtilisateurComponent } from './site-avocat/a-utilisateur/a-utilisateur.component';
-import { MUtilisateurComponent } from './site-avocat/m-utilisateur/m-utilisateur.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'accueil', component: AccueilComponent },
+  { path: 'acceuil/:email', component: AccueilComponent },
   { path: 'info', component: InfoComponent },
   { path: 'a-affaire', component: AAffaireComponent },
   { path: 'l-affaire', component: LAffaireComponent },
@@ -34,9 +34,8 @@ const routes: Routes = [
   { path: 'l-tribunaux', component: LTribunauxComponent },
   { path: 'a-utilisateur', component: AUtilisateurComponent },
   { path: 'l-utilisateurs', component: LUtilisateursComponent },
-  { path: 'm-utilisateur', component: MUtilisateurComponent },
-  { path: 'm-utilisateur/:id', component: MUtilisateurComponent },
-  { path: 'calendrier', component: FullCalendarComponent },
+  { path: 'm-affaire', component: MAffaireComponent },
+  { path: 'm-affaire/:id', component: MAffaireComponent },
   { path: 'equipe', component: EquipeComponent },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
   { path: '*', component: LoginComponent },

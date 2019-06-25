@@ -14,11 +14,11 @@ export class DAffaireComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private affaireService: AffaireService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.dAffaireForm = this.formBuilder.group({
+      idAffaire: 0,
       reference: ['', Validators.required],
       titre: ['', Validators.required],
       description: ['', Validators.required],
@@ -29,8 +29,5 @@ export class DAffaireComponent implements OnInit {
       this.affaireActif = data;
     }));
   }
-  // editAffaire(index) {
-  //   this.dAffaireForm =
-  //   this.affaireService.editMode = true;
-  // }
+
 }

@@ -13,26 +13,25 @@
         <div>
             <table id="myTable">
                 <tr class="header">
-                    <th style="width:20%; text-align: center" onclick="sortTable(0)">Référence<i
+                    <th style="width:15%; text-align: center" onclick="sortTable(0)">Référence<i
                             style="align-items:right" class="material-icons">unfold_more</i></th>
-                    <th style="width:25%; text-align: center" onclick="sortTable(1)">Titre<i style="align-items:right"
+                    <th style="width:20%; text-align: center" onclick="sortTable(1)">Titre<i style="align-items:right"
                             class="material-icons">unfold_more</i></th>
                     <th style="width:40%; text-align: center" onclick="sortTable(2)">Description<i
                             style="align-items:right" class="material-icons">unfold_more</i></th>
-                    <th style="width:10%; text-align: center" onclick="sortTableChiffre()">Status<i
+                    <th style="width:15%; text-align: center" onclick="sortTableChiffre()">Status<i
                             style="align-items:right" class="material-icons">unfold_more</i></th>
-                    <th style="width:5%; text-align: center">Consulter</th>
+                    <th style="width:10%; text-align: center">Modifier le status</th>
                 </tr>
                 <tbody>
-                    <tr *ngFor="let affaire of affaires">
+                    <tr>
                         <td style="text-align: center">{{affaireActif.reference}}</td>
                         <td style="text-align: center">{{affaireActif.titre}}</td>
                         <td style="text-align: center">{{affaireActif.description}}</td>
                         <td style="text-align: center">{{affaireActif.status}}</td>
-                        <td class="waves-effect waves-light btn-small"><i class="material-icons left">edit</i>Modifier
-                            le status</td>
-                        <a class="waves-effect blue-grey darken-2 btn"><i class="material-icons">remove_red_eye</i></a>
-
+                        <td><a routerLink="/m-affaire/{{affaireActif.idAffaire}}"
+                                class="waves-effect blue-grey darken-2 btn">
+                                <i class="material-icons">remove_red_eye</i></a></td>
                     </tr>
                 </tbody>
             </table>

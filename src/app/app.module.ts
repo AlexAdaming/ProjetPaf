@@ -18,11 +18,10 @@ import { LUtilisateursComponent } from './site-avocat/l-utilisateurs/l-utilisate
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './site-avocat/navbar/navbar.component';
-import { FullCalendarComponent } from './site-avocat/full-calendar/full-calendar.component';
 import { APhaseComponent } from './site-avocat/a-phase/a-phase.component';
 import { EquipeComponent } from './site-avocat/equipe/equipe.component';
 import { AUtilisateurComponent } from './site-avocat/a-utilisateur/a-utilisateur.component';
-import { MUtilisateurComponent } from './site-avocat/m-utilisateur/m-utilisateur.component';
+import { MAffaireComponent } from './site-avocat/m-affaire/m-affaire.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +39,10 @@ import { MUtilisateurComponent } from './site-avocat/m-utilisateur/m-utilisateur
     LTribunauxComponent,
     LUtilisateursComponent,
     NavbarComponent,
-    FullCalendarComponent,
     APhaseComponent,
     EquipeComponent,
     AUtilisateurComponent,
-    MUtilisateurComponent
+    MAffaireComponent,
   ],
   imports: [
     BrowserModule,

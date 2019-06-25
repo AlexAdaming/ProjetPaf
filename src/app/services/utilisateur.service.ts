@@ -35,7 +35,7 @@ export class UtilisateurService {
   }
 
   GetPhasesByIdutilisateur(id: number) {
-    return this.http.get(this.utilisateurUrl + '/phasesUt/' + id, {responseType: 'text'});
+    return this.http.get(this.utilisateurUrl + '/phasesUt/' + id, { responseType: 'text' });
 
   }
   validate(Email: string, mdp: string) {

@@ -33,7 +33,7 @@ export class AccueilComponent implements OnInit {
 
     this.utilisateurService.GetIdByEmail(this.email).subscribe(id => {
       console.log(id[0]);
-      this.utilisateurService.GetPhasesByIdutilisateur(id[0]).subscribe (data => {
+      this.utilisateurService.GetPhasesByIdutilisateur(id[0]).subscribe(data => {
         this.events = JSON.stringify(data);
         console.log(data);
       });

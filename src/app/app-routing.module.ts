@@ -37,7 +37,7 @@ const routes: Routes = [
   { path: 'm-affaire', component: MAffaireComponent },
   { path: 'm-affaire/:id', component: MAffaireComponent },
   { path: 'equipe', component: EquipeComponent },
-  { path: '', redirectTo: '/accueil', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '*', component: LoginComponent },
 
 ];
